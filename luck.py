@@ -12,11 +12,12 @@ headers = {
 
 url = "https://m.search.naver.com/p/csearch/dcontent/external_api/json_todayunse_v2.naver?_callback=window.__jindo2_callback._fortune_my_0&gender=m&birth=20050410&solarCal=solar&time="
 
-response = urlopen(Request(url, headers=headers))  # .read().decode("utf-8")
+response = urlopen(Request(url, headers=headers)).read().decode("utf-8")
+print(response)
+
+# luck_json = json.loads(response)['result']
 
 
 
 # ['result'][0]
-
-
 # print(luck_json)

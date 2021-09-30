@@ -24,10 +24,11 @@ url = "https://finance.daum.net/api/sectors/?includedStockLimit=2&page=1&perPage
 # 주식 데이터
 response = urlopen(Request(url, headers=headers)).read().decode('utf-8')
 
+
+
 # 응답 데이터 str 타입을 json 포맷으로 변환 및 data 저장
 rank_json = json.loads(response)['data']
 # print(rank_json)
-
 
 # 데이터 가공
 
