@@ -3,6 +3,7 @@ from urllib.request import urlopen, Request
 from fake_useragent import UserAgent
 
 useragent = UserAgent()
+print(useragent.chrome)
 
 headers = {
     'referer': 'https://search.naver.com/search.naver?where=nexearch&sm=tab_bck&ie=utf8&ug_cid=mwk&query=%EC%83%9D%EB%85%84%EC%9B%94%EC%9D%BC%20%EC%9A%B4%EC%84%B8',

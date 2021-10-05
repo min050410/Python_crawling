@@ -11,7 +11,24 @@ soup = BeautifulSoup(json_string, 'html.parser')
 
 # tags = soup.find_all('p')
 
-for tag in soup.find_all('p'):
-    print(tag.text)  # 찾은 p 태그 내에 모든 txt를 출력
+list = []
 
+for tag in soup.find_all('p'):  # 찾은 p 태그 내에 모든 txt를 출력
+    list.append(tag.text)
 
+null = list.count("")
+
+for i in range(null):  # ''인 값 remove
+    list.remove('')
+
+# print(list[:18])
+list = list[:18]
+
+j = 0
+print("   <거북왕>")
+for i in range(18):
+    if len(list[i]) <= 8:
+        j += 1
+        print(f"{j}. {list[i]}")
+    else:
+        print(f"   {list[i]}")
